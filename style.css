@@ -1,0 +1,38 @@
+body{
+    background-image: url('assets/breath.jpg');
+    background-size:cover;
+}
+.canvas{
+    position:absolute;
+    z-index: -1;
+}
+.title{
+    position:absolute;
+    z-index: 999;
+    width:300px;
+    margin-top:240px;
+    text-align:center;
+    padding-left:48px;
+}
+.bottom{
+    float:right;
+    font-family: 'Amatic SC', cursive;
+    font-size:54px;
+    height:50px;
+    color:white;
+    text-decoration: none;
+    position:relative;
+    transition: ease-in-out 0.3s; 
+}
+.bottom:hover{
+    color:red;
+/*    opacity: 0.5;*/
+}
+.caption{
+    margin-top:12px;
+    font-family:'Gorgia';
+    float:right;
+    color:gray;
+    font-size: 14px;
+    letter-spacing: 2px;
+}

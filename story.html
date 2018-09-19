@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ENG">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrink with me</title>
+	<script src="js/p5.min.js"></script>
+	<script src="js/p5.js"></script>
+	<script src="js/addons/p5.dom.js"></script>
+	<script src="js/addons/p5.sound.js"></script>
+	<script src="js/p5.speech.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+    <body>
+    <div style="visibility:hidden">
+<!--
+    <audio autoplay loop>
+        <source src="assets/The-Alchemist.mp3" type="audio/mpeg">
+    </audio> 
+-->
+    </div>
+    <div class="live-story">
+    <script>
+        var songStress;
+        var myRec = new p5.SpeechRec('en-US', parseResult); // new P5.SpeechRec object
+        myRec.continuous = true; // do continuous recognition
+        myRec.interimResults = true; // allow partial recognition (faster, less accurate)
+        var bg;
+        
+        function preload() {
+        songStress = loadSound('assets/The-Alchemist.mp3');
+        }
+        
+        function setup()
+        {
+            bg = loadImage("assets/breath.jpg");
+            songStress.loop(); 
+            createCanvas(1260, 620);
+            // instructions:
+            background(bg);
+            fill(255, 255, 255);
+            textSize(24);
+            textFont('Amatic SC');
+            textAlign(LEFT);
+            text("I'm so stressed,", 48, 40);
+            //myRec.onResult = parseResult; // now in the constructor
+            myRec.start(); // start engine
+            songStress = loadSound ('assets/The-Alchemist.mp3');
+        }
+     
+        
+        
+        function parseResult()
+        {
+            // recognition system will often append words into phrases.
+            // so hack here is to only use the last word:
+            var mostrecentword = myRec.resultString.split(' ').pop();
+            if(mostrecentword.indexOf("stressed")!==-1) { 
+                //text
+                text("I hope some one can hear me,", 48, 74);
+                songStress.pause(); 
+                songHear.play();
+            }
+            else if(mostrecentword.indexOf("hear")!==-1) { 
+                text("Can anybody see the light? ", 48, 104);
+                songHear.pause();
+                songLight.play();
+            }
+            else if(mostrecentword.indexOf("light")!==-1) { 
+                text("Why it rains everyday?", 48, 134);
+            }
+            else if(mostrecentword.indexOf("everyday")!==-1) { 
+                text("Why I can't breath normally?", 48, 134);
+            }
+            else if(mostrecentword.indexOf("normally")!==-1) { 
+                text("I really really hate myself! ", 48, 164);
+            }
+            else if(mostrecentword.indexOf("myself")!==-1) { 
+                text("Sometimes I just want to escape...", 48, 194);
+            }
+            else if(mostrecentword.indexOf("escape")!==-1) { 
+                text("have no reason", 48, 224);
+            }
+            else if(mostrecentword.indexOf("reason")!==-1) { 
+                text("Or I want to destroy something ugly", 48, 254);
+            }
+            
+            else if(mostrecentword.indexOf("ugly")!==-1) { 
+                text("Like my hell life", 48, 254);
+            }
+            
+            else if(mostrecentword.indexOf("life")!==-1) { 
+                text("It makes me feel relief.", 48, 254);
+            }
+
+            else if(mostrecentword.indexOf("relief")!==-1) { 
+                text("Am I strange?", 48, 254);
+            }
+            
+            else if(mostrecentword.indexOf("strange?")!==-1) { 
+                text("Are you afraid of me", 48, 254);
+            }
+            
+            else if(mostrecentword.indexOf("afraid")!==-1) { 
+                text("Are you still listening?", 48, 254);
+            }
+            else if(mostrecentword.indexOf("listening")!==-1) { 
+                text("Are you still listening?", 48, 254);
+            }
+            
+            
+            
+
+
+        }
+    </script>
+    </div>
+
+
+</body>
+</html>
