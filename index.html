@@ -11,7 +11,7 @@
 	<!---google font--->
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 </head>
-<body id="top-image">
+<body class="bg1">
 <div class="canvas">
     <script>    
     // center point
@@ -43,7 +43,7 @@
     }
 
     function setup() {
-        bg = loadImage("assets/shrink.jpg");
+        bg = loadImage("assets/diving2.jpg");
         createCanvas(1260, 620);
         songStress.loop(); 
 
@@ -125,6 +125,7 @@
         nodeX[i] = nodeStartX[i]+sin(radians(angle[i]))*(accelX*2);
         nodeY[i] = nodeStartY[i]+sin(radians(angle[i]))*(accelY*2);
         angle[i] += frequency[i];
+
       }
     }
     </script> 

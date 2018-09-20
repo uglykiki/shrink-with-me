@@ -1,24 +1,14 @@
 body{
+    background-image: url('assets/diving2.jpg');
+    background-size:cover;
+    overflow-x:hidden;
+}
+
+.bg3{
     background-image: url('assets/breath.jpg');
     background-size:cover;
-/*    overflow-x:hidden;*/
-}
-.page1{
-    background-image: url('assets/shrink.jpg');
-    background-size:cover;
-/*    overflow-x:hidden;*/
+    overflow-x:hidden;
     
-}
-.bg{
-    background-image: url('assets/breath.jpg');
-    background-size:cover;
-    position:fixed ;
-    top:0;
-    width:100%;
-    z-index:0;
-    height:100%;
-    background-size: calc(100% + 50px);
-/*    overflow-x:hidden;*/
 }
 
 a{
@@ -67,23 +57,22 @@ a{
 }
 .leave{
     position:absolute;
+    width:100%;
+    text-align:center;
+    bottom:40px;
     z-index:999;
-    font-size: 24px;
-    padding: 16px;
-    margin-top:240px;
+    font-size: 28px;
     font-family: 'Amatic SC', cursive;
-    font-size:64px;
-    height:50px;
+    
+}
+.leave a{
     color:white;
     text-decoration: none;
-    position:relative;
     transition: ease-in-out 0.3s; 
 }
-.leave:hover{
+.leave a:hover{
     color:red;
 }
-
-
 
 
 /*Readme page*/
@@ -128,3 +117,4 @@ a{
     color:red;
 
 }
+
