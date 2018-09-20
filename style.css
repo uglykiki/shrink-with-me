@@ -1,15 +1,38 @@
 body{
     background-image: url('assets/breath.jpg');
     background-size:cover;
+/*    overflow-x:hidden;*/
 }
+.page1{
+    background-image: url('assets/shrink.jpg');
+    background-size:cover;
+/*    overflow-x:hidden;*/
+    
+}
+.bg{
+    background-image: url('assets/breath.jpg');
+    background-size:cover;
+    position:fixed ;
+    top:0;
+    width:100%;
+    z-index:0;
+    height:100%;
+    background-size: calc(100% + 50px);
+/*    overflow-x:hidden;*/
+}
+
+a{
+    text-decoration: none;
+}
+/*Index Page*/
 .canvas{
     position:absolute;
     z-index: -1;
 }
 .title{
     position:absolute;
-    z-index: 999;
-    width:300px;
+    z-index: 2;
+    width:360px;
     margin-top:240px;
     text-align:center;
     padding-left:48px;
@@ -17,7 +40,7 @@ body{
 .bottom{
     float:right;
     font-family: 'Amatic SC', cursive;
-    font-size:54px;
+    font-size:64px;
     height:50px;
     color:white;
     text-decoration: none;
@@ -29,10 +52,79 @@ body{
 /*    opacity: 0.5;*/
 }
 .caption{
-    margin-top:12px;
+    margin-top:24px;
     font-family:'Gorgia';
     float:right;
     color:gray;
     font-size: 14px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+/*story Page*/
+.live-story{
+    position:absolute;
+    z-index: -1;
+}
+.leave{
+    position:absolute;
+    z-index:999;
+    font-size: 24px;
+    padding: 16px;
+    margin-top:240px;
+    font-family: 'Amatic SC', cursive;
+    font-size:64px;
+    height:50px;
+    color:white;
+    text-decoration: none;
+    position:relative;
+    transition: ease-in-out 0.3s; 
+}
+.leave:hover{
+    color:red;
+}
+
+
+
+
+/*Readme page*/
+.info{
+/*    margin:0px auto;*/
+    font-family: 'Crimson Text', serif;
+    color:gray;
+    line-height:8px;
+    padding:16px;
+    font-size: 15px;
+    text-align:center;
+    position:absolute;
+    z-index: 999;
+    width:100%;
+    margin-top:160px;
+}
+.info a{
+    color:white;
+}
+.info a:hover{
+   opacity:0.8;
+}
+
+.thanks{
+    line-height:48px;
+    font-size: 56px;
+    color:white;
+    font-family: 'Amatic SC', cursive;
+}
+.back{
+    font-family: 'Amatic SC', cursive;
+    font-size:24px;
+    color:white;
+    text-decoration: none;
+    position:relative;
+    transition: ease-in-out 0.3s; 
+    cursor:pointer;
+    padding-top:24px;
+    
+}
+.back:hover{
+    color:red;
+
 }

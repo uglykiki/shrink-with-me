@@ -10,44 +10,55 @@
 	<script src="js/addons/p5.sound.js"></script>
 	<script src="js/p5.speech.js"></script>
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Crimson+Text" rel="stylesheet">
 </head>
-    <body>
-    <div style="visibility:hidden">
-<!--
-    <audio autoplay loop>
-        <source src="assets/The-Alchemist.mp3" type="audio/mpeg">
-    </audio> 
--->
-    </div>
-    <div class="live-story">
+<body class="page2">
+<div class="live-story">
     <script>
         var songStress;
+        var songRain;
+        var songHelp;
+        var songRun;
+        var songKill;
+        var songLaugh;
+        var songBreath;
+        var songCry;
         var myRec = new p5.SpeechRec('en-US', parseResult); // new P5.SpeechRec object
         myRec.continuous = true; // do continuous recognition
         myRec.interimResults = true; // allow partial recognition (faster, less accurate)
         var bg;
         
+        // musics
         function preload() {
-        songStress = loadSound('assets/The-Alchemist.mp3');
+            songStress = loadSound('assets/The-Alchemist.mp3');
+            songRain = loadSound('assets/rain.mp3');
+            songHelp= loadSound('assets/help2.mp3');
+            songRun = loadSound('assets/run.wav');
+            songKill = loadSound('assets/kill.mp3');
+            songBreath = loadSound('assets/breath.wav');
+            songLaugh = loadSound('assets/laugh.wav');
+            songCry = loadSound('assets/cry.wav');
         }
         
         function setup()
         {
             bg = loadImage("assets/breath.jpg");
+            //loop song//
             songStress.loop(); 
             createCanvas(1260, 620);
+            
             // instructions:
             background(bg);
             fill(255, 255, 255);
-            textSize(24);
-            textFont('Amatic SC');
+            textSize(20);
+            textFont('Georgia');
             textAlign(LEFT);
-            text("I'm so stressed,", 48, 40);
+            text("I'm so stressed,", 64, 40);
+            
             //myRec.onResult = parseResult; // now in the constructor
             myRec.start(); // start engine
             songStress = loadSound ('assets/The-Alchemist.mp3');
         }
-     
         
         
         function parseResult()
@@ -57,64 +68,64 @@
             var mostrecentword = myRec.resultString.split(' ').pop();
             if(mostrecentword.indexOf("stressed")!==-1) { 
                 //text
-                text("I hope some one can hear me,", 48, 74);
-                songStress.pause(); 
-                songHear.play();
+                text("I hope some one can hear me,", 64, 74);
+                //change soung
+                songCry.play();
             }
             else if(mostrecentword.indexOf("hear")!==-1) { 
-                text("Can anybody see the light? ", 48, 104);
-                songHear.pause();
-                songLight.play();
+                text("Can anybody see the light? ", 64, 104);
+
             }
             else if(mostrecentword.indexOf("light")!==-1) { 
-                text("Why it rains everyday?", 48, 134);
+                text("Why it rains everyday?", 64, 134);
+                songRain.play();
             }
             else if(mostrecentword.indexOf("everyday")!==-1) { 
-                text("Why I can't breath normally?", 48, 134);
+                text("Why I can't breath normally?", 64, 164);
+                
             }
-            else if(mostrecentword.indexOf("normally")!==-1) { 
-                text("I really really hate myself! ", 48, 164);
+            else if(mostrecentword.indexOf("breath")!==-1) { 
+                text("I really really hate myself! ", 64, 194);
+                songHelp.play();
+                
             }
             else if(mostrecentword.indexOf("myself")!==-1) { 
-                text("Sometimes I just want to escape...", 48, 194);
+                text("Sometimes I just want to escape...", 64, 224);
+                songRun.play();
+                
             }
             else if(mostrecentword.indexOf("escape")!==-1) { 
-                text("have no reason", 48, 224);
+                text("have no reason", 64, 254);
             }
             else if(mostrecentword.indexOf("reason")!==-1) { 
-                text("Or I want to destroy something ugly", 48, 254);
+                text("Or I want to destroy something ugly", 64, 284);
+                songKill.play();
             }
             
             else if(mostrecentword.indexOf("ugly")!==-1) { 
-                text("Like my hell life", 48, 254);
+                text("Like my hell life", 64, 314);
+                songBreath.play();
             }
             
             else if(mostrecentword.indexOf("life")!==-1) { 
-                text("It makes me feel relief.", 48, 254);
+                text("It makes me feel relief.", 64, 344);
             }
 
             else if(mostrecentword.indexOf("relief")!==-1) { 
-                text("Am I strange?", 48, 254);
+                text("Am I strange?", 64, 374);
+                songLaugh.play();
+                
             }
-            
             else if(mostrecentword.indexOf("strange?")!==-1) { 
-                text("Are you afraid of me", 48, 254);
+                text("Are you afraid of me", 64, 404);
             }
-            
             else if(mostrecentword.indexOf("afraid")!==-1) { 
-                text("Are you still listening?", 48, 254);
+                text("Are you still listening?", 64, 434);
             }
-            else if(mostrecentword.indexOf("listening")!==-1) { 
-                text("Are you still listening?", 48, 254);
-            }
-            
-            
-            
-
-
         }
     </script>
-    </div>
+</div>
+<a class="leave" href="readme.html">leave</a>
 
 
 </body>
