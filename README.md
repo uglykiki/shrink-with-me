@@ -1,7 +1,7 @@
 Shrink With Me......
 
 
-Speech Library: [p5.speech](http://ability.nyu.edu/p5.js-speech/) / NYU Ability Project
+Speech Library: [p5.speech](http://ability.nyu.edu/p5.js-speech/) （NYU Ability Project）
 Sound library: [freesound.org](https://freesound.org/)
-Royalty free images; [Unsplash]()
-Sound Track: Ap Chou, Forest - 
+Royalty free images; [Unsplash](https://unsplash.com)
+Sound Track: Ap Chou, Forest - TheAlchemist
