@@ -9,7 +9,7 @@
    <script src="js/addons/p5.sound.js"></script>
    <link rel="stylesheet" href="style.css">
 	<!---google font--->
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Crimson+Text" rel="stylesheet">
 </head>
 <body class="bg1">
 <div class="canvas">
@@ -62,7 +62,7 @@
 
         // iniitalize frequencies for corner nodes
         for (var i=0; i<nodes; i++){
-        frequency[i] = random(5, 12);
+        frequency[i] = random(12, 16);
         }
 
         noStroke();
@@ -71,7 +71,7 @@
 
     function draw() {
         background(bg);
-        fill(0, 100,);
+        fill(255, 0);
         rect(0,0,width, height);
         drawShape();
         moveShape();
@@ -132,9 +132,8 @@
 </div>
 
 <div class="title"> 
-<a class="bottom" href="story.html">"Shrink with me..."</a>
-<div class="caption">[Please allow microphone and speak with me.]</div>
-
+    <a class="bottom" href="story.html">"Shrink with me..."</a>
+    <div class="caption">[Please allow microphone and <b>speak with me.</b>]</div>
 </div>
 </body>
 </html>

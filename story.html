@@ -11,8 +11,14 @@
 	<script src="js/p5.speech.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Crimson+Text" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="page2">
+<body>
+<div class="tip">Please allow &nbsp;
+    <i class="fa fa-microphone" ></i> 
+    <br>and speak the following sentences......
+</div>
+
 <div class="live-story">
     <script>
         var songStress;
@@ -28,7 +34,7 @@
         myRec.interimResults = true; // allow partial recognition (faster, less accurate)
         var bg;
         
-        // musics
+        // load musics
         function preload() {
             songStress = loadSound('assets/The-Alchemist.mp3');
             songRain = loadSound('assets/rain.mp3');
@@ -50,10 +56,10 @@
             // instructions:
             background(bg);
             fill(255, 255, 255);
-            textSize(20);
+            textSize(18);
             textFont('Georgia');
             textAlign(LEFT);
-            text("I'm so stressed,", 64, 40);
+            text("I'm so stressed,", 80, 80);
             
             //myRec.onResult = parseResult; // now in the constructor
             myRec.start(); // start engine
@@ -68,59 +74,62 @@
             var mostrecentword = myRec.resultString.split(' ').pop();
             if(mostrecentword.indexOf("stressed")!==-1) { 
                 //text
-                text("I hope some one can hear me,", 64, 74);
+                text("I hope some one can hear me,", 80, 114);
                 //change soung
                 songCry.play();
             }
             else if(mostrecentword.indexOf("hear")!==-1) { 
-                text("Can anybody see the light? ", 64, 104);
+                text("Can anybody see the light? ", 80, 144);
 
             }
             else if(mostrecentword.indexOf("light")!==-1) { 
-                text("Why it rains everyday?", 64, 134);
+                text("Why does it rain everyday?", 80, 174);
                 songRain.play();
             }
             else if(mostrecentword.indexOf("everyday")!==-1) { 
-                text("Why I can't breath normally?", 64, 164);
+                text("Why can't I breath normally?", 80, 204);
                 
             }
             else if(mostrecentword.indexOf("breath")!==-1) { 
-                text("I really really hate myself! ", 64, 194);
+                text("I really really hate myself! ", 80, 234);
                 songHelp.play();
-                
             }
             else if(mostrecentword.indexOf("myself")!==-1) { 
-                text("Sometimes I just want to escape...", 64, 224);
+                text("Sometimes I just want to escape,", 80, 264);
                 songRun.play();
                 
             }
             else if(mostrecentword.indexOf("escape")!==-1) { 
-                text("have no reason", 64, 254);
+                text("have no reason....", 80, 294);
             }
             else if(mostrecentword.indexOf("reason")!==-1) { 
-                text("Or I want to destroy something ugly", 64, 284);
+                text("Or I want to destroy something ugly", 80, 324);
                 songKill.play();
             }
             
             else if(mostrecentword.indexOf("ugly")!==-1) { 
-                text("Like my hell life", 64, 314);
+                text("Like my hell life", 80, 354);
                 songBreath.play();
             }
             
             else if(mostrecentword.indexOf("life")!==-1) { 
-                text("It makes me feel relief.", 64, 344);
+                text("It makes me feel relieved.", 80, 384);
             }
 
-            else if(mostrecentword.indexOf("relief")!==-1) { 
-                text("Am I strange?", 64, 374);
+            else if(mostrecentword.indexOf("relieved")!==-1) { 
+                text("Am I strange?", 80, 414);
                 songLaugh.play();
                 
             }
             else if(mostrecentword.indexOf("strange?")!==-1) { 
-                text("Are you afraid of me", 64, 404);
+                text("Are you afraid of me?", 80, 444);
             }
             else if(mostrecentword.indexOf("afraid")!==-1) { 
-                text("Are you still listening?", 64, 434);
+                text("Are you still listening?", 80, 474);
+                songRun.play();
+            }
+            else if(mostrecentword.indexOf("listening")!==-1) { 
+                text("I know you are leaving........", 80, 504);
             }
         }
     </script>

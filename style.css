@@ -42,7 +42,7 @@ a{
 }
 .caption{
     margin-top:24px;
-    font-family:'Gorgia';
+    font-family: 'Crimson Text', serif;
     float:right;
     color:gray;
     font-size: 14px;
@@ -50,6 +50,15 @@ a{
 }
 
 /*story Page*/
+.tip{
+    color:darkgray;
+    font-size:14px;
+    position:absolute;
+    width:100%;
+    text-align:center;
+    font-family: 'Crimson Text', serif;
+    margin-top: 12px;
+}
 .live-story{
     position:absolute;
     z-index: -1;
@@ -58,7 +67,7 @@ a{
     position:absolute;
     width:100%;
     text-align:center;
-    bottom:40px;
+    bottom:28px;
     z-index:999;
     font-size: 28px;
     font-family: 'Amatic SC', cursive;
@@ -87,6 +96,7 @@ a{
     z-index: 999;
     width:100%;
     margin-top:160px;
+    letter-spacing: 1px;
 }
 .info a{
     color:white;
