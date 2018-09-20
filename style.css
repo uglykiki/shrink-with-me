@@ -98,6 +98,7 @@ a{
     z-index:999;
     font-size: 28px;
     font-family: 'Amatic SC', cursive;
+    cursor:pointer;
     
 }
 .leave a{
@@ -161,14 +162,9 @@ a{
 }
 
 
-
-
-
-
-
 .back{
     font-family: 'Amatic SC', cursive;
-    font-size:24px;
+    font-size:28px;
     color:white;
     text-decoration: none;
     position:relative;
