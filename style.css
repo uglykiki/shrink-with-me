@@ -12,6 +12,7 @@ body{
 
 a{
     text-decoration: none;
+    cursor: cell;
 }
 /*Index Page*/
 .canvas{
@@ -84,7 +85,7 @@ a{
 .live-story{
     position:absolute;
     z-index: -2;
-    cursor:pointer;
+    cursor:cell;
 }
 .live-story:hover{
     opacity:0.2;
@@ -98,7 +99,7 @@ a{
     z-index:999;
     font-size: 28px;
     font-family: 'Amatic SC', cursive;
-    cursor:pointer;
+    cursor:cell;
     
 }
 .leave a{
@@ -123,7 +124,7 @@ a{
     position:absolute;
     z-index: 999;
     width:100%;
-    margin-top:15%;
+    margin-top:10%;
     letter-spacing: 1px;
 }
 .info a{
@@ -133,17 +134,23 @@ a{
    opacity:0.8;
 }
 
-.thanks{
-    line-height:48px;
+.question{
+/*    line-height:24px;*/
     font-size: 56px;
     color:white;
     font-family: 'Amatic SC', cursive;
     
     
 }
-.thanks:hover{
+.question:hover{
     animation: shake 1s; 
     animation-iteration-count: infinite; 
+}
+.question2{
+    font-size:18px;
+    color:white;
+    line-height:20px;
+    padding-bottom:28px;
 }
 
 
@@ -169,12 +176,10 @@ a{
     text-decoration: none;
     position:relative;
     transition: ease-in-out 0.3s; 
-    cursor:pointer;
-    padding-top:24px;
+    cursor:cell;
     
 }
 .back:hover{
     color:red;
-
 }
 
